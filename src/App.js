@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+const peliculas = [
+  {
+    "nombre" : "Un Crimen Argentino",
+    "duracion" : 120
+  },
+  {
+    "nombre" : "Minions",
+    "duracion" : 95
+  },
+  {
+    "nombre" : "After",
+    "duracion" : 98
+  }
+]
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p> CINE  </p>
+        {
+          peliculas.map ( pelicula => (
+            <div> 
+              <p> Pelicula: {pelicula.nombre}</p>
+              <p> Duracion: {pelicula.duracion}</p>
+              <hr />
+            </div>
+          )
+          )
+        }
     </div>
   );
 }
